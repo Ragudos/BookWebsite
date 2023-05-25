@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./global.css" />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <script type="text/javascript" src="./errorHandler.js" defer></script>
+    <script type="text/javascript" src="./bookHandler.js" defer></script>
+    <script type="text/javascript" src="./app.js" defer></script>
+    <title>Book Website</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar" id="navbar">
+            <h1><a href="#" title="Back to Top">
+                    BOOK
+                </a></h1>
+            <ul>
+                <li>
+                    <a href="#create_book_section" title="Create a Book">
+                        Create a Book
+                    </a>
+                </li>
+                <li>
+                    <a href="#book_section" title="Browse Books">
+                        Browse Books
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="create_book_section" id="create_book_section">
+            <h2>CREATE A BOOK</h2>
+            <form id="save_story">
+                <label for="title_input">
+                    <span>Title of Your Story</span>
+                    <input
+                        type="text"
+                        title="Enter your book title"
+                        placeholder="Title of your story"
+                        id="title_input"
+                        onkeyup="handleChange(this)"
+                    />
+                </label>
+                <label for="content_input">
+                    <span>Write Your Story</span>
+                    <textarea
+                        title="Enter your story"
+                        placeholder="Write your story..."
+                        id="content_input"
+                    ></textarea>
+                </label>
+                <input 
+                    type="submit"
+                    value="SAVE"
+                    title="Save your story"
+                    id="submit_button"
+                    disabled
+                />
+            </form>
+        </div>
+        <section class="section_of_stories" id="book_section">
+        </section>
+    </main>
+</body>
+
+</html>

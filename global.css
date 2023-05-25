@@ -1,0 +1,30 @@
+
+:root {  
+    --primary-color: rgb(10, 15, 20);
+    --text-color: rgb(250, 255, 240);
+    --border-color: rgb(120, 90, 180);
+    --link-active: rgb(80, 179, 90);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --primary-color: rgb(245, 250, 255);
+        --text-color: rgb(15, 25, 20);
+        --link-active: #CD201F;
+        --border-color: rgb(150, 100, 200);
+    }
+}
+
+*[data-theme="light"] {
+    --primary-color: rgb(245, 250, 255);
+    --text-color: rgb(15, 25, 20);
+    --link-active: #CD201F;
+    --border-color: rgb(150, 100, 200);
+}
+
+*[data-theme="dark"] {
+    --primary-color: rgb(10, 15, 20);
+    --text-color: rgb(250, 255, 240);
+    --link-active: rgb(80, 179, 90);
+    --border-color: rgb(120, 90, 180);
+}

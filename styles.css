@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0ms !important;
+        animation-duration: 0ms !important;
+        scroll-behavior: auto;
+    }
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button,
+input,
+textarea {
+    border: none;
+    background-color: transparent;
+}
+
+button:disabled,
+input:disabled,
+a:disabled {
+    color: gray !important;
+}
+
+button:disabled:hover,
+input:disabled:hover {
+    background-color: rgba(0, 128, 0, 0.705) !important;
+}
+
+button:disabled:hover,
+input:disabled:hover,
+a:disabled:hover {
+    cursor: default;
+}
+
+button,
+input,
+textarea,
+a {
+    transition: all 200ms ease-in-out;
+}
+
+button,
+a,
+input[type="submit"] {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    padding: 1.25rem 1.75rem;
+}
+
+header > .navbar {
+    max-width: 40rem;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+header > .navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+header > .navbar ul li a:hover,
+header > .navbar ul li a[data-active="true"] {
+    color: var(--link-active);
+}
+
+main {
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+}
+
+main > * {
+    margin: 0 auto;
+    width: clamp(12rem, calc(1rem + 50%), 50rem);
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+div.create_book_section {
+    text-align: center;
+}
+
+div.create_book_section form {
+    margin-top: 2rem;
+}
+
+div.create_book_section form >  * {
+    width: 100%;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+label span {
+    font-size: 1.5rem;
+}
+
+label input,
+label textarea {
+    resize: none;
+    width: 80%;
+    border-radius: 0.5rem;
+    color: inherit;
+    height: 2rem;
+    padding: 1.25rem 1rem;
+
+    border: 1px solid var(--border-color);
+}
+
+label textarea {
+    height: 15rem;
+}
+
+label:nth-child(2) {
+    margin-top: 2rem;
+}
+
+input[type="submit"] {
+    margin-top: 3rem;
+    padding: 0.75rem 0.5rem;
+    background-color: rgba(0, 128, 0, 0.705);
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+input[type="submit"]:hover {
+    background-color: green;
+}
